@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./img/anna-pelzer-IGfIGP5ONV0-unsplash.jpg);
+    background-size: cover;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+.col-1-of-3{
+    margin: 130px 200px;
+    display: flex;
+    flex-wrap: wrap;
+   
+   
+}
+
+.card{
+    perspective: 1500px;
+    position: relative;
+    box-shadow: 1rem 1.5rem 5rem rgba(0,0,0,0 );
+    
+   
+
+
+
+    &__details{
+
+        ul{
+           list-style: none;
+           width: 80%;
+           margin: 0 auto;
+
+
+
+           li{
+               text-align: center;
+               font-size: 1.2rem;
+               padding: 1rem;
+
+
+                &:not(:last-child){
+                    border-bottom: 1px solid grey;
+                }
+           }
+              
+
+        }
+
+       
+    }
+
+  &__picture{
+    background-blend-mode: screen;
+      
+
+
+     &-1{
+        
+        background-image: linear-gradient(to right bottom ,#3a1c71 ,#d76d77,#ffaf7b), url(./img/dan-gold-4_jhDO54BYg-unsplash.jpg);
+        height: 13rem;
+       background-size: cover;
+
+     }
+     &-2{
+ 
+        background-image:  linear-gradient(to right bottom ,#3a1c71 ,#d76d77,#ffaf7b) ,url(./img/anna-pelzer-IGfIGP5ONV0-unsplash.jpg);
+        height: 13rem;
+       background-size: cover;
+
+     }
+     &-3{
+          
+        background-image:  linear-gradient(to right bottom ,#3a1c71 ,#d76d77,#ffaf7b),url(./img/lily-banse--YHSwy6uqvk-unsplash.jpg);
+        height: 13rem;
+       background-size: cover;
+
+     }
+  }
+
+    &__side{
+        width: 20rem;
+        height:30rem;
+        transition: all 1s;
+        position: absolute;
+        backface-visibility: hidden;
+        overflow: hidden;
+        border-radius: 30px;
+        opacity: 0.9;
+       
+      
+
+
+
+        &-front{
+          &-1{
+            background-color:white;
+          }
+          &-2{
+            background-color:white;
+          }
+          &-3{
+            background-color:white;
+          }
+        }
+
+        &-back{
+            &-1{
+                background-image: linear-gradient(to right bottom ,#3a1c71 ,#d76d77,#ffaf7b);
+                transform: rotateY(-180deg);
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom ,#3a1c71 ,#d76d77,#ffaf7b);
+                transform: rotateY(-180deg);
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom ,#3a1c71 ,#d76d77,#ffaf7b);
+                transform: rotateY(-180deg);
+            }
+        }
+        
+
+    }
+
+    &:hover &__side-front{
+        &-1{
+            transform: rotateY(180deg);
+        }
+        &-2{
+            transform: rotateY(180deg);
+        }
+        &-3{
+            transform: rotateY(180deg);
+        }
+
+    }
+    &:hover &__side-back{
+        &-1{
+            transform: rotateY(0deg);
+        }
+        &-2{
+            transform: rotateY(0deg);
+        }
+        &-3{
+            transform: rotateY(0deg);
+        }
+
+    }
+}
